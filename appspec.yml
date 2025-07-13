@@ -5,6 +5,9 @@ files:
     destination: /usr/share/tomcat/webapps/
 hooks:
   BeforeInstall:
+    - location: scripts/remove_existing_war.sh
+      timeout: 300
+      runas: root
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
