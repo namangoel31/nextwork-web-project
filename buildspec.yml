@@ -16,7 +16,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - echo Contents of working directory:
+      - echo Contents of working directory
       - find . -type f
       - echo Packaging artifacts...
       - mvn package -s settings.xml
